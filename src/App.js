@@ -1,32 +1,20 @@
 import "./App.css";
-import React, { useState } from "react";
-import { useTransition, animated } from "react-spring";
+import React from "react";
+import Side from "./components/Side";
+import Home from "./components/Home";
+import About from "./components/About";
+import Blog from "./components/Blog";
+import Content from "./components/Content";
 
 const App = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const transition = useTransition(isVisible, {
-    from: { x: -100, y: 500, opacity: 0, scale: 0, delay: 0 },
-    enter: { x: 0, y: 0, opacity: 1, scale: 1, delay: 400 },
-    leave: { x: 100, y: 500, opacity: 0, scale: 0, delay: -300 },
-  });
-
-  const change = () => {
-    setIsVisible((isVisible) => !isVisible);
-  };
   return (
     <div className="App">
-      <button
-        onClick={() => {
-          change();
-          setTimeout(change, 1500);
-        }}
-      >
-        {isVisible ? "un-mount" : "mount"}
-      </button>
-      <div className="container">
-        {transition((style, item) =>
-          item ? <animated.div className="item" style={style} /> : ""
-        )}
+      <Side className="side" />
+      <div className="main">
+        <Home />
+        <About />
+        <Blog />
+        <Content />
       </div>
     </div>
   );

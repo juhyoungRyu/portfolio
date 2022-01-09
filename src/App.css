@@ -1,27 +1,19 @@
 html {
-  background-color: #c72c41;
+  width: 99vw;
+  height: 400vh;
 }
 
 .App {
-  text-align: center;
-  padding: 40px;
+  display: flex;
+  flex-direction: row;
 }
 
-button {
-  padding: 8px;
+.side {
+  position: fixed;
 }
 
-.container {
-  padding: 40px;
-  margin-top: 200px;
-  min-height: 200px;
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
-.item {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px;
-}
