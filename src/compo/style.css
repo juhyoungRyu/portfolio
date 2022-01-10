@@ -3,7 +3,25 @@ html {
 }
 
 .Home {
-  width: 88vw;
-  height: 100ch;
-  background-color: green;
+  width: 82.8vw;
+  height: 100vh;
+  background-color: #3cb371;
+}
+
+.About {
+  width: 82.8vw;
+  height: 100vh;
+  background-color: #3cb371;
+}
+
+.Blog {
+  width: 82.8vw;
+  height: 100vh;
+  background-color: #3cb371;
+}
+
+.Content {
+  width: 82.8vw;
+  height: 100vh;
+  background-color: #3cb371;
 }

@@ -4,6 +4,11 @@ import Home from "./compo/Home";
 import About from "./compo/About";
 import Blog from "./compo/Blog";
 import Content from "./compo/Content";
+import { RiHomeSmileLine } from "react-icons/ri";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { CgNotes } from "react-icons/cg";
+import { CgSmileMouthOpen } from "react-icons/cg";
+import { FaRegCopyright } from "react-icons/fa";
 
 const App = () => {
   const [home, setHome] = useState(true);
@@ -11,13 +16,66 @@ const App = () => {
   const [blog, setBlog] = useState(false);
   const [content, setContent] = useState(false);
 
+  const btnHandle = (where) => {
+    if (where === "home") {
+      setHome(true);
+      setAbout(false);
+      setBlog(false);
+      setContent(false);
+    } else if (where === "about") {
+      setHome(false);
+      setAbout(true);
+      setBlog(false);
+      setContent(false);
+    } else if (where === "blog") {
+      setHome(false);
+      setAbout(false);
+      setBlog(true);
+      setContent(false);
+    } else {
+      setHome(false);
+      setAbout(false);
+      setBlog(false);
+      setContent(true);
+    }
+  };
+
   return (
     <div className="App">
-      <div className="side"></div>
+      <div className="side">
+        <div className="titleCon">
+          <p className="title">Turtle</p>
+        </div>
+        <div className="btnCon">
+          <button className="btn" onClick={() => btnHandle("home")}>
+            <RiHomeSmileLine className="icon" />
+            <p className="sub">Home</p>
+          </button>
+          <button className="btn" onClick={() => btnHandle("about")}>
+            <AiOutlineInfoCircle className="icon" />
+            <p className="sub">About</p>
+          </button>
+          <button className="btn" onClick={() => btnHandle("blog")}>
+            <CgNotes className="icon" />
+            <p className="sub">Blog</p>
+          </button>
+          <button className="btn" onClick={() => btnHandle("content")}>
+            <CgSmileMouthOpen className="icon" />
+            <p className="sub">Content</p>
+          </button>
+        </div>
+        <div className="cpCon">
+          <FaRegCopyright color="white" opacity={0.5} />
+          <p className="copyright">2022 turtle portfolio</p>
+        </div>
+      </div>
+
+      <div className="line" />
+
       {home ? <Home /> : ""}
-      {/* {about ? <About /> : null}
-      {blog ? <Blog /> : null}
-      {content ? <Content /> : null} */}
+      {about ? <About /> : ""}
+      {blog ? <Blog /> : ""}
+      {content ? <Content /> : ""}
     </div>
   );
 };
