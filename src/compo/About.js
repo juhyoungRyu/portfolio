@@ -1,8 +1,8 @@
 import React from "react";
-import "./Comp.css";
+import "./style.css";
 
 const About = () => {
-  return <div className="container"></div>;
+  return <div className="About"></div>;
 };
 
 export default About;

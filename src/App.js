@@ -1,21 +1,23 @@
+import React, { useState } from "react";
 import "./App.css";
-import React from "react";
-import Side from "./components/Side";
-import Home from "./components/Home";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import Content from "./components/Content";
+import Home from "./compo/Home";
+import About from "./compo/About";
+import Blog from "./compo/Blog";
+import Content from "./compo/Content";
 
 const App = () => {
+  const [home, setHome] = useState(true);
+  const [about, setAbout] = useState(false);
+  const [blog, setBlog] = useState(false);
+  const [content, setContent] = useState(false);
+
   return (
     <div className="App">
-      <Side className="side" />
-      <div className="main">
-        <Home />
-        <About />
-        <Blog />
-        <Content />
-      </div>
+      <div className="side"></div>
+      {home ? <Home /> : ""}
+      {/* {about ? <About /> : null}
+      {blog ? <Blog /> : null}
+      {content ? <Content /> : null} */}
     </div>
   );
 };
