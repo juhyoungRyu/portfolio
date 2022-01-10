@@ -54,9 +54,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 10vw;
+  width: 15vw;
   height: 7vh;
-  margin-left: 50px;
+  margin-left: 20px;
   border-color: transparent;
 }
 
@@ -74,7 +74,7 @@
   font-weight: 100;
   font-family: "Black Han Sans", sans-serif;
   opacity: 0.5;
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 .cpCon {
@@ -82,5 +82,5 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 14px;
+  margin-left: 10px;
 }
