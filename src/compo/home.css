@@ -9,6 +9,9 @@
 .arrowZone {
   width: 82.8vw;
   height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .photo {
@@ -47,4 +50,21 @@
 
 .hi {
   color: #98fb98;
+}
+
+.iconArrow {
+  font-size: 55px;
+  font-weight: 100;
+  color: white;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tt {
+  color: white;
 }

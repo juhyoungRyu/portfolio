@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import "./home.css";
+import { MdOutlineMouse } from "react-icons/md";
+import { useTransition, animated } from "react-spring";
 
 const Home = () => {
+  const [stat, setStat] = useState(true);
+  const transition = useTransition(stat, {
+    from: { opacity: 0, y: 0 },
+    enter: { opacity: 0.8, y: -50 },
+    leave: { opacity: 0, y: 0 },
+  });
+
+  useEffect(() => {
+    setInterval(() => setStat((stat) => !stat), 2000);
+  }, []);
+
   return (
     <div className="Home">
       <section className="photoZone">
@@ -17,7 +30,22 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="arrowZone"></section>
+      <section className="arrowZone">
+        {transition((style, stat) =>
+          stat ? (
+            <animated.div
+              style={style}
+              className="item"
+              onClick={() => console.log("work")}
+            >
+              <MdOutlineMouse className="iconArrow" />
+              <p className="tt">Click</p>
+            </animated.div>
+          ) : (
+            ""
+          )
+        )}
+      </section>
     </div>
   );
 };
