@@ -49,19 +49,27 @@ const App = () => {
         <div className="btnCon">
           <button className="btn" onClick={() => btnHandle("home")}>
             <RiHomeSmileLine className="icon" />
-            <p className="sub">Home</p>
+            {home ? <p className="sub1">Home</p> : <p className="sub">Home</p>}
           </button>
           <button className="btn" onClick={() => btnHandle("about")}>
             <AiOutlineInfoCircle className="icon" />
-            <p className="sub">About</p>
+            {about ? (
+              <p className="sub1">About</p>
+            ) : (
+              <p className="sub">About</p>
+            )}
           </button>
           <button className="btn" onClick={() => btnHandle("blog")}>
             <CgNotes className="icon" />
-            <p className="sub">Blog</p>
+            {blog ? <p className="sub1">Blog</p> : <p className="sub">Blog</p>}
           </button>
           <button className="btn" onClick={() => btnHandle("content")}>
             <CgSmileMouthOpen className="icon" />
-            <p className="sub">Content</p>
+            {content ? (
+              <p className="sub1">Content</p>
+            ) : (
+              <p className="sub">Content</p>
+            )}
           </button>
         </div>
         <div className="cpCon">

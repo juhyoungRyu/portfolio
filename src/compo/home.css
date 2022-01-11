@@ -1,0 +1,50 @@
+.photoZone {
+  display: flex;
+  width: 82.8vw;
+  height: 65vh;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.arrowZone {
+  width: 82.8vw;
+  height: 35vh;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.pho {
+  width: 280px;
+  height: 300px;
+  background-color: white;
+  border-radius: 300px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  font-family: "Black Han Sans", sans-serif;
+  color: white;
+  font-size: 55px;
+  height: 10vh;
+  margin-top: 30px;
+}
+
+.innerText {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.hi {
+  color: #98fb98;
+}

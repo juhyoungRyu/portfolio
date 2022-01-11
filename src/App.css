@@ -34,6 +34,7 @@
   font-family: "Black Han Sans", sans-serif;
   font-size: 65px;
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 .btnCon {
@@ -56,11 +57,19 @@
   align-items: center;
   width: 15vw;
   height: 7vh;
-  margin-left: 20px;
+  margin-left: 45px;
   border-color: transparent;
 }
 
 .sub:hover {
+  color: #98fb98;
+}
+
+.sub1 {
+  color: #fdff88;
+}
+
+.sub1:hover {
   color: #98fb98;
 }
 
