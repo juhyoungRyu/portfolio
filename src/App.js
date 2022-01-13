@@ -80,7 +80,7 @@ const App = () => {
 
       <div className="line" />
 
-      {home ? <Home /> : ""}
+      {home ? <Home func={btnHandle} /> : ""}
       {about ? <About /> : ""}
       {blog ? <Blog /> : ""}
       {content ? <Content /> : ""}

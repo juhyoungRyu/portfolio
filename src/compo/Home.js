@@ -3,18 +3,15 @@ import "./style.css";
 import "./home.css";
 import { MdOutlineMouse } from "react-icons/md";
 import { useTransition, animated } from "react-spring";
+import { btnHandle } from "../App";
 
-const Home = () => {
+const Home = (props) => {
   const [stat, setStat] = useState(true);
-  const transition = useTransition(stat, {
-    from: { opacity: 0, y: 0 },
-    enter: { opacity: 0.8, y: -50 },
-    leave: { opacity: 0, y: 0 },
-  });
 
-  useEffect(() => {
-    setInterval(() => setStat((stat) => !stat), 2000);
-  }, []);
+  const transition = useTransition(stat, {
+    from: { y: 0, opacity: 0, delay: 1000 },
+    enter: { y: -50, opacity: 1, dalay: 0 },
+  });
 
   return (
     <div className="Home">
@@ -24,8 +21,8 @@ const Home = () => {
           <div className="text">
             Juhyoung Ryu
             <span className="innerText">
-              <span className="hi">상상</span>을{" "}
-              <span className="hi">현실</span>로 구현하는 사람
+              <span className="hi">상상</span>을<span className="hi">현실</span>
+              로 구현하는 사람
             </span>
           </div>
         </div>
@@ -36,7 +33,9 @@ const Home = () => {
             <animated.div
               style={style}
               className="item"
-              onClick={() => console.log("work")}
+              onClick={() => {
+                props.func("about");
+              }}
             >
               <MdOutlineMouse className="iconArrow" />
               <p className="tt">Click</p>

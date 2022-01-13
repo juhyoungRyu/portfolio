@@ -97,3 +97,7 @@
   align-items: center;
   margin-left: 10px;
 }
+
+.item:hover {
+  text-shadow: 0 0 0.3em, 0 0 0.3em;
+}
