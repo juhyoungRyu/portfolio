@@ -6,11 +6,16 @@ import { useTransition, animated } from "react-spring";
 import { btnHandle } from "../App";
 
 const Home = (props) => {
-  const [stat, setStat] = useState(true);
+  const [stat, setStat] = useState(false);
+
+  useEffect(() => {
+    setStat((stat) => !stat);
+  }, []);
 
   const transition = useTransition(stat, {
-    from: { y: 0, opacity: 0, delay: 1000 },
-    enter: { y: -50, opacity: 1, dalay: 0 },
+    from: { y: 0, opacity: 0, delay: 0 },
+    enter: { y: -50, opacity: 1, delay: 300 },
+    leave: { opacity: 0 },
   });
 
   return (

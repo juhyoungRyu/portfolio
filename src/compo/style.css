@@ -1,5 +1,5 @@
 html {
-  background-color: red;
+  background-color: #3cb371;
 }
 
 .Home {
@@ -8,22 +8,39 @@ html {
   background-color: #3cb371;
   display: flex;
   flex-direction: column;
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 .About {
   width: 82.8vw;
   height: 100vh;
   background-color: #3cb371;
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 .Blog {
   width: 82.8vw;
   height: 100vh;
   background-color: #3cb371;
+  animation-name: fadein;
+  animation-duration: 3s;
 }
 
 .Content {
   width: 82.8vw;
   height: 100vh;
   background-color: #3cb371;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
