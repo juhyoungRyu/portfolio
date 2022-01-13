@@ -1,3 +1,3 @@
 # My Portfolio
 
-This is my first Portfolio with React.js.
+This is my first Portfolio with React.js
