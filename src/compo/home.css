@@ -73,7 +73,7 @@
 }
 
 .item:hover {
-  animation: item 1s 1s infinite linear alternate;
+  animation: item 1s 0s infinite linear alternate;
 }
 
 @keyframes item {

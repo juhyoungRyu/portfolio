@@ -26,8 +26,8 @@ const Home = (props) => {
           <div className="text">
             Juhyoung Ryu
             <span className="innerText">
-              <span className="hi">상상</span>을<span className="hi">현실</span>
-              로 구현하는 사람
+              <span className="hi">상상</span>을
+              <span className="hi"> 현실</span>로 구현하는 사람
             </span>
           </div>
         </div>
