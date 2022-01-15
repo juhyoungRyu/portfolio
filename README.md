@@ -1,3 +1,3 @@
 # My Portfolio
 
-안녕하세요,, 저는 거북이같은 사람입니다...
+Hi! I'm a Maker!
