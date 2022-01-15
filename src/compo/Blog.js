@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import "./blog.css";
 import GitHubCalendar from "react-github-calendar";
 const Blog = () => {
   return (
@@ -9,7 +10,6 @@ const Blog = () => {
         hideMonthLabels={true}
         hideColorLegend={true}
         year={new Date().getFullYear()}
-        color={"#98fb98"}
       />
     </div>
   );
