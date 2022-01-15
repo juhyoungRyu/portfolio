@@ -42,6 +42,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* <div className={about ? "side2" : "side"}> */}
       <div className="side">
         <div className="titleCon">
           <p className="title">Turtle</p>
