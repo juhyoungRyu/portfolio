@@ -4,3 +4,25 @@
   align-items: center;
   flex-direction: column;
 }
+.mm {
+  color: #e05f5f;
+}
+
+.react-activity-calendar__count {
+  color: white;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 14px;
+}
+
+.Blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-activity-calendar {
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #2e8b57;
+}
