@@ -82,7 +82,7 @@ const App = () => {
       <div className="line" />
 
       {home ? <Home func={btnHandle} /> : ""}
-      {about ? <About /> : ""}
+      {about ? <About func={btnHandle} /> : ""}
       {blog ? <Blog /> : ""}
       {content ? <Content /> : ""}
     </div>
