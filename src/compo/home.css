@@ -10,8 +10,9 @@
   width: 82.8vw;
   height: 35vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .photo {
@@ -63,8 +64,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation: opacity 2s 2s infinite linear alternate;
+  animation: opacity 2s 1s infinite linear alternate;
   color: white;
+  margin-bottom: 40px;
 }
 
 .tt {

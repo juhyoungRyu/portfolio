@@ -12,11 +12,11 @@ const Home = (props) => {
     setStat((stat) => !stat);
   }, []);
 
-  const transition = useTransition(stat, {
-    from: { y: 0, opacity: 0, delay: 0 },
-    enter: { y: -50, opacity: 1, delay: 300 },
-    leave: { opacity: 0 },
-  });
+  // const transition = useTransition(stat, {
+  //   from: { y: 0, opacity: 0, delay: 0 },
+  //   enter: { y: -50, opacity: 1, delay: 300 },
+  //   leave: { opacity: 0 },
+  // });
 
   return (
     <div className="Home">
@@ -33,7 +33,7 @@ const Home = (props) => {
         </div>
       </section>
       <section className="arrowZone">
-        {transition((style, stat) =>
+        {/* {transition((style, stat) =>
           stat ? (
             <animated.div
               style={style}
@@ -48,7 +48,16 @@ const Home = (props) => {
           ) : (
             ""
           )
-        )}
+        )} */}
+        <div
+          className="item"
+          onClick={() => {
+            props.func("about");
+          }}
+        >
+          <MdOutlineMouse className="iconArrow" />
+          <p className="tt">Click</p>
+        </div>
       </section>
     </div>
   );
