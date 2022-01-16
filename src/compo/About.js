@@ -95,6 +95,7 @@ const About = (props) => {
                 }}
               >
                 <animated.img style={style} src={logo2} />
+
                 <h1 className="profileAbout">Profile</h1>
               </animated.div>
 
@@ -199,7 +200,16 @@ const About = (props) => {
                   setFlip2((flip2) => !flip2);
                 }}
               >
-                {flip2 ? "hello" : ""}
+                {flip2 ? (
+                  <div className="graph">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                ) : (
+                  ""
+                )}
               </animated.div>
             </ReactCardFlip>
           ) : (
