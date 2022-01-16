@@ -1,0 +1,1 @@
+<div class="box" style="opacity: 1; width: 300px; height: 500px; border-radius: 30px; object-fit: none; transform: none;">…</div>flex
