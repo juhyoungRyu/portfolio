@@ -1,28 +1,106 @@
 .About {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.triger {
-  color: white;
-  background-color: #222;
-  border: 0px solid transparent;
-  font-size: 30px;
-  width: 25vw;
-  height: 10vh;
-}
-.itemBox {
-  width: 20vw;
-  height: 20vh;
-  background-color: white;
-}
-
-.conta {
-  width: 70vw;
-  height: 70vh;
+.profileCon {
+  width: 41.4vw;
+  height: 100vh;
+  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.stackCon {
+  width: 41.4vw;
+  height: 100vh;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: white;
+  object-fit: scale-down;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btnConAbout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 10vh;
+  align-items: center;
+}
+
+.cardConAbout {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonAboutChange {
+  height: 7vh;
+  width: 10vw;
+  font-size: 30px;
+  font-family: "Black Han Sans", sans-serif;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 5px solid #98fb98;
+  color: #98fb98;
+}
+
+.buttonAboutChange:hover {
+  color: #fdff88;
+  border: 5px solid #fdff88;
+}
+
+.textBoxAbout {
+  font-weight: "100";
+  margin-left: 20px;
+}
+
+.ppp {
+  color: #666;
+  font-size: 12px;
+  margin: 4px;
+}
+
+.turtle11 {
+  object-fit: contain;
+  /* width: 6vw; */
+  width: 50pt;
+}
+
+.turtleCon {
+  display: flex;
+  width: 30vw;
+  height: 6vh;
+  /* object-fit: contain; */
+  margin-top: 120px;
+  margin-left: 20px;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.profileAbout {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 100;
+  margin-left: 25px;
+  margin-top: -20px;
+  color: #333;
 }
