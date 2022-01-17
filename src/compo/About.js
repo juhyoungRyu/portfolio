@@ -6,6 +6,12 @@ import { useTransition, animated } from "react-spring";
 import logo2 from "../img/logo2.jpg";
 import logo3 from "../img/logo2.png";
 import logo4 from "../img/turtle433.png";
+import html from "../img/html5.svg";
+import css from "../img/css3.svg";
+import js from "../img/javascript.svg";
+import react from "../img/react.svg";
+
+import Progress from "./Progress";
 
 const About = (props) => {
   const [oneVisible, setOneVisible] = useState(false);
@@ -190,7 +196,8 @@ const About = (props) => {
                   setFlip2((flip2) => !flip2);
                 }}
               >
-                <animated.img style={style} src={logo3} />
+                <animated.img style={style} src={logo2} />
+                <animated.h1 className="skillAbout">Skills</animated.h1>
               </animated.div>
 
               <animated.div
@@ -202,10 +209,30 @@ const About = (props) => {
               >
                 {flip2 ? (
                   <div className="graph">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className="pro">
+                      <img
+                        width={25}
+                        height={25}
+                        src={html}
+                        className="iconHTMl"
+                      />
+                      <Progress pro={60} name={"progress-bar1"} />
+                    </div>
+                    {/* <div className="pro">
+                      <img src={css} className="iconAblut" />
+
+                      <Progress pro={30} name={"progress-bar2"} />
+                    </div>
+                    <div className="pro">
+                      <img src={js} className="iconAblut" />
+
+                      <Progress pro={70} name={"progress-bar3"} />
+                    </div>
+                    <div className="pro">
+                      <img src={react} className="iconAblut" />
+
+                      <Progress pro={55} name={"progress-bar4"} />
+                    </div> */}
                   </div>
                 ) : (
                   ""

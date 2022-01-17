@@ -1,0 +1,84 @@
+.progress-bar1 {
+  height: 15%;
+  background-color: #e34f26;
+  margin: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+  animation: progress-animationHTML 3s forwards;
+}
+
+.progress-bar2 {
+  height: 15%;
+  background-color: #1572b6;
+  margin: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+  animation: progress-animationCSS 3s forwards;
+}
+
+.progress-bar3 {
+  height: 15%;
+  background-color: rgb(125, 44, 255);
+  margin: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+  animation: progress-animationJS 3s forwards;
+}
+
+.progress-bar4 {
+  height: 15%;
+  background-color: rgb(125, 44, 255);
+  margin: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+  animation: progress-animationREACT 3s forwards;
+}
+
+@keyframes progress-animationHTML {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes progress-animationCSS {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes progress-animationJS {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-animationREACT {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+.proCon {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconHTML {
+  filter: invert(42%) sepia(20%) saturate(1823%) hue-rotate(326deg)
+    brightness(99%) contrast(115%);
+}
