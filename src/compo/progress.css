@@ -18,7 +18,7 @@
 
 .progress-bar3 {
   height: 15%;
-  background-color: rgb(125, 44, 255);
+  background-color: #f7df1e;
   margin: 4px;
   margin-right: 10px;
   border-radius: 10px;
@@ -27,7 +27,7 @@
 
 .progress-bar4 {
   height: 15%;
-  background-color: rgb(125, 44, 255);
+  background-color: #61dafb;
   margin: 4px;
   margin-right: 10px;
   border-radius: 10px;
@@ -81,4 +81,11 @@
 .iconHTML {
   filter: invert(42%) sepia(20%) saturate(1823%) hue-rotate(326deg)
     brightness(99%) contrast(115%);
+}
+
+.nameAboutSkill {
+  width: 2.5vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
 }

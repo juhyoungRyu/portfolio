@@ -81,6 +81,17 @@ const About = (props) => {
       await next({ x: 140, opacity: 0 });
     },
   });
+
+  const clcikCard1 = () => {
+    setText1("개발하는 거북");
+    setText2("좋아하는 것은 상상");
+    setText3("취미는 구현입니다");
+    setText4("올해로 19살이고");
+    setText5("Js와 Python을");
+    setText6("사용합니다");
+    setFlip1((flip1) => !flip1);
+  };
+
   return (
     <div className="About">
       <div className="profileCon">
@@ -91,13 +102,7 @@ const About = (props) => {
                 style={style}
                 className="box"
                 onClick={() => {
-                  setText1("개발하는 거북");
-                  setText2("좋아하는 것은 상상");
-                  setText3("취미는 구현입니다");
-                  setText4("올해로 19살이고");
-                  setText5("Js와 Python을");
-                  setText6("사용합니다");
-                  setFlip1((flip1) => !flip1);
+                  clcikCard1();
                 }}
               >
                 <animated.img style={style} src={logo2} />
@@ -147,18 +152,22 @@ const About = (props) => {
         <button
           className="buttonAboutChange"
           onClick={() => {
-            if (twoVisible === false) {
-              setText1("");
-              setText2("");
-              setText3("");
-              setText4("");
-              setText5("");
-              setText6("");
-              setFlip1((flip1) => !flip1);
-              setOneVisible(false);
-              setTwoVisible(true);
-            } else if (twoVisible === true) {
-              setTwoVisible(false);
+            if (flip1 === true) {
+              if (twoVisible === false) {
+                setText1("");
+                setText2("");
+                setText3("");
+                setText4("");
+                setText5("");
+                setText6("");
+                setFlip1((flip1) => !flip1);
+                setOneVisible(false);
+                setTwoVisible(true);
+              } else if (twoVisible === true) {
+                setTwoVisible(false);
+              }
+            } else {
+              clcikCard1();
             }
           }}
         >
@@ -210,29 +219,21 @@ const About = (props) => {
                 {flip2 ? (
                   <div className="graph">
                     <div className="pro">
-                      <img
-                        width={25}
-                        height={25}
-                        src={html}
-                        className="iconHTMl"
-                      />
+                      <p className="nameAboutSkill">HTML</p>
                       <Progress pro={60} name={"progress-bar1"} />
                     </div>
-                    {/* <div className="pro">
-                      <img src={css} className="iconAblut" />
-
+                    <div className="pro">
+                      <p className="nameAboutSkill">CSS</p>
                       <Progress pro={30} name={"progress-bar2"} />
                     </div>
                     <div className="pro">
-                      <img src={js} className="iconAblut" />
-
+                      <p className="nameAboutSkill">JS</p>
                       <Progress pro={70} name={"progress-bar3"} />
                     </div>
                     <div className="pro">
-                      <img src={react} className="iconAblut" />
-
+                      <p className="nameAboutSkill">React</p>
                       <Progress pro={55} name={"progress-bar4"} />
-                    </div> */}
+                    </div>
                   </div>
                 ) : (
                   ""
