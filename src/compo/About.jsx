@@ -81,6 +81,19 @@ const About = (props) => {
       await next({ x: 140, opacity: 0 });
     },
   });
+
+  const clcikCard1 = () => {
+    if (twoVisible === false) {
+      setText1("개발하는 거북");
+      setText2("좋아하는 것은 상상");
+      setText3("취미는 구현입니다");
+      setText4("올해로 19살이고");
+      setText5("Js와 Python을");
+      setText6("사용합니다");
+      setFlip1((flip1) => !flip1);
+    }
+  };
+
   return (
     <div className="About">
       <div className="profileCon">
@@ -91,13 +104,7 @@ const About = (props) => {
                 style={style}
                 className="box"
                 onClick={() => {
-                  setText1("개발하는 거북");
-                  setText2("좋아하는 것은 상상");
-                  setText3("취미는 구현입니다");
-                  setText4("올해로 19살이고");
-                  setText5("Js와 Python을");
-                  setText6("사용합니다");
-                  setFlip1((flip1) => !flip1);
+                  clcikCard1();
                 }}
               >
                 <animated.img style={style} src={logo2} />
@@ -118,12 +125,20 @@ const About = (props) => {
                   setFlip1((flip1) => !flip1);
                 }}
               >
-                <div className="textBoxAbout" style={{ marginTop: "25px" }}>
-                  <h3>{text1}</h3>
+                <div
+                  className="textBoxAbout"
+                  style={{
+                    marginTop: "75px",
+                    marginBottom: "20px",
+                    fontSize: "35px",
+                    fontFamily: "Nanum Pen Script",
+                  }}
+                >
+                  <p>{text1}</p>
                 </div>
                 <div className="textBoxAbout">
                   <p>{text2}</p>
-                  <p>{text3}</p>
+                  <p style={{ marginBottom: "20px" }}>{text3}</p>
                 </div>
                 <div className="textBoxAbout">
                   <p>{text4}</p>
@@ -147,18 +162,22 @@ const About = (props) => {
         <button
           className="buttonAboutChange"
           onClick={() => {
-            if (twoVisible === false) {
-              setText1("");
-              setText2("");
-              setText3("");
-              setText4("");
-              setText5("");
-              setText6("");
-              setFlip1((flip1) => !flip1);
-              setOneVisible(false);
-              setTwoVisible(true);
-            } else if (twoVisible === true) {
-              setTwoVisible(false);
+            if (flip1 === true) {
+              if (twoVisible === false) {
+                setText1("");
+                setText2("");
+                setText3("");
+                setText4("");
+                setText5("");
+                setText6("");
+                setFlip1((flip1) => !flip1);
+                setOneVisible(false);
+                setTwoVisible(true);
+              } else if (twoVisible === true) {
+                setTwoVisible(false);
+              }
+            } else {
+              clcikCard1();
             }
           }}
         >
@@ -168,15 +187,24 @@ const About = (props) => {
         <button
           className="buttonAboutChange"
           onClick={() => {
-            setOneVisible((oneVisible) => !oneVisible);
-
-            if (oneVisible === false && twoVisible === true) {
-              setOneVisible(false);
-              setTwoVisible(false);
-              setBtnText("go Blog");
+            if (oneVisible === false && twoVisible === false) {
+              setOneVisible((oneVisible) => !oneVisible);
+            } else if (
+              oneVisible === false &&
+              twoVisible === true &&
+              flip2 === false
+            ) {
+              setFlip2((flip2) => !flip2);
             }
 
-            if (btnText === "go Blog") {
+            if (oneVisible === false && twoVisible === true && flip2 === true) {
+              setOneVisible(false);
+              setFlip2(false);
+              setTwoVisible(false);
+              setBtnText("go Next");
+            }
+
+            if (btnText === "go Next") {
               props.func("blog");
             }
           }}
@@ -210,29 +238,21 @@ const About = (props) => {
                 {flip2 ? (
                   <div className="graph">
                     <div className="pro">
-                      <img
-                        width={25}
-                        height={25}
-                        src={html}
-                        className="iconHTMl"
-                      />
+                      <p className="nameAboutSkill">HTML</p>
                       <Progress pro={60} name={"progress-bar1"} />
                     </div>
-                    {/* <div className="pro">
-                      <img src={css} className="iconAblut" />
-
+                    <div className="pro">
+                      <p className="nameAboutSkill">CSS</p>
                       <Progress pro={30} name={"progress-bar2"} />
                     </div>
                     <div className="pro">
-                      <img src={js} className="iconAblut" />
-
+                      <p className="nameAboutSkill">JS</p>
                       <Progress pro={70} name={"progress-bar3"} />
                     </div>
                     <div className="pro">
-                      <img src={react} className="iconAblut" />
-
-                      <Progress pro={55} name={"progress-bar4"} />
-                    </div> */}
+                      <p className="nameAboutSkill">React</p>
+                      <Progress pro={45} name={"progress-bar4"} />
+                    </div>
                   </div>
                 ) : (
                   ""
