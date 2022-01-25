@@ -83,6 +83,7 @@ const About = (props) => {
   });
 
   const clcikCard1 = () => {
+<<<<<<< HEAD
     if (twoVisible === false) {
       setText1("개발하는 거북");
       setText2("좋아하는 것은 상상");
@@ -92,6 +93,15 @@ const About = (props) => {
       setText6("사용합니다");
       setFlip1((flip1) => !flip1);
     }
+=======
+    setText1("개발하는 거북");
+    setText2("좋아하는 것은 상상");
+    setText3("취미는 구현입니다");
+    setText4("올해로 19살이고");
+    setText5("Js와 Python을");
+    setText6("사용합니다");
+    setFlip1((flip1) => !flip1);
+>>>>>>> c9189808f67b3e262ad2739cd2763a32678bd769
   };
 
   return (
@@ -251,7 +261,11 @@ const About = (props) => {
                     </div>
                     <div className="pro">
                       <p className="nameAboutSkill">React</p>
+<<<<<<< HEAD
                       <Progress pro={45} name={"progress-bar4"} />
+=======
+                      <Progress pro={55} name={"progress-bar4"} />
+>>>>>>> c9189808f67b3e262ad2739cd2763a32678bd769
                     </div>
                   </div>
                 ) : (
