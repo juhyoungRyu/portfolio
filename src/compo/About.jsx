@@ -6,10 +6,6 @@ import { useTransition, animated } from "react-spring";
 import logo2 from "../img/logo2.jpg";
 import logo3 from "../img/logo2.png";
 import logo4 from "../img/turtle433.png";
-import html from "../img/html5.svg";
-import css from "../img/css3.svg";
-import js from "../img/javascript.svg";
-import react from "../img/react.svg";
 
 import Progress from "./Progress";
 
@@ -83,7 +79,6 @@ const About = (props) => {
   });
 
   const clcikCard1 = () => {
-<<<<<<< HEAD
     if (twoVisible === false) {
       setText1("개발하는 거북");
       setText2("좋아하는 것은 상상");
@@ -93,15 +88,6 @@ const About = (props) => {
       setText6("사용합니다");
       setFlip1((flip1) => !flip1);
     }
-=======
-    setText1("개발하는 거북");
-    setText2("좋아하는 것은 상상");
-    setText3("취미는 구현입니다");
-    setText4("올해로 19살이고");
-    setText5("Js와 Python을");
-    setText6("사용합니다");
-    setFlip1((flip1) => !flip1);
->>>>>>> c9189808f67b3e262ad2739cd2763a32678bd769
   };
 
   return (
@@ -139,7 +125,7 @@ const About = (props) => {
                   className="textBoxAbout"
                   style={{
                     marginTop: "75px",
-                    marginBottom: "20px",
+                    marginBottom: "45px",
                     fontSize: "35px",
                     fontFamily: "Nanum Pen Script",
                   }}
@@ -248,24 +234,20 @@ const About = (props) => {
                 {flip2 ? (
                   <div className="graph">
                     <div className="pro">
-                      <p className="nameAboutSkill">HTML</p>
                       <Progress pro={60} name={"progress-bar1"} />
+                      <p className="nameAboutSkill">HTML</p>
                     </div>
                     <div className="pro">
-                      <p className="nameAboutSkill">CSS</p>
                       <Progress pro={30} name={"progress-bar2"} />
+                      <p className="nameAboutSkill">CSS</p>
                     </div>
                     <div className="pro">
-                      <p className="nameAboutSkill">JS</p>
                       <Progress pro={70} name={"progress-bar3"} />
+                      <p className="nameAboutSkill">JS</p>
                     </div>
                     <div className="pro">
-                      <p className="nameAboutSkill">React</p>
-<<<<<<< HEAD
                       <Progress pro={45} name={"progress-bar4"} />
-=======
-                      <Progress pro={55} name={"progress-bar4"} />
->>>>>>> c9189808f67b3e262ad2739cd2763a32678bd769
+                      <p className="nameAboutSkill">React</p>
                     </div>
                   </div>
                 ) : (

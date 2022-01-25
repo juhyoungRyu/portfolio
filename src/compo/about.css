@@ -98,7 +98,7 @@
   width: 30vw;
   height: 6vh;
   /* object-fit: contain; */
-  margin-top: 110px;
+  margin-top: 90px;
   margin-left: 20px;
   justify-content: flex-start;
   flex-direction: row;
@@ -121,22 +121,21 @@
 }
 
 .graph {
-  height: 500px;
+  height: 480px;
   width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.pro {
-  width: 300px;
-  height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-end;
+}
+
+.pro {
+  width: 100px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-left: 10px;
 }
 
 .logoAbout {
