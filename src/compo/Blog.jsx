@@ -6,7 +6,7 @@ import Card from "./Card";
 const Blog = () => {
   return (
     <div className="Blog">
-      <Card type={"github"} icon={"BsGithub"} />
+      <Card name={"github"} icon={true} />
       <GitHubCalendar
         username="juhyoungryu"
         hideMonthLabels={true}
