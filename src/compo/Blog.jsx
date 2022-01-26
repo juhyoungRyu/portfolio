@@ -6,13 +6,16 @@ import Card from "./Card";
 const Blog = () => {
   return (
     <div className="Blog">
-      <Card name={"github"} icon={true} />
-      <GitHubCalendar
+      <div className="cardZoneBlog">
+        <Card name={"Github"} icon={true} className="blogCard" />
+        <Card name={"velog"} icon={false} className="blogCard" />
+      </div>
+      {/* <GitHubCalendar
         username="juhyoungryu"
         hideMonthLabels={true}
         hideColorLegend={true}
         year={new Date().getFullYear()}
-      />
+      /> */}
     </div>
   );
 };
