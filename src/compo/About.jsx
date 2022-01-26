@@ -232,22 +232,35 @@ const About = (props) => {
                 }}
               >
                 {flip2 ? (
-                  <div className="graph">
-                    <div className="pro">
-                      <Progress pro={60} name={"progress-bar1"} />
-                      <p className="nameAboutSkill">HTML</p>
+                  <div className="AboutSkillBox">
+                    <div className="turtleCon1">
+                      {flip2 ? <img src={logo4} className="turtle12" /> : ""}
+                      {flip2 ? <img src={logo4} className="turtle12" /> : ""}
+                      {flip2 ? <img src={logo4} className="turtle12" /> : ""}
+                      {flip2 ? <img src={logo4} className="turtle12" /> : ""}
+                      {flip2 ? <img src={logo4} className="turtle12" /> : ""}
                     </div>
-                    <div className="pro">
-                      <Progress pro={30} name={"progress-bar2"} />
-                      <p className="nameAboutSkill">CSS</p>
-                    </div>
-                    <div className="pro">
-                      <Progress pro={70} name={"progress-bar3"} />
-                      <p className="nameAboutSkill">JS</p>
-                    </div>
-                    <div className="pro">
-                      <Progress pro={45} name={"progress-bar4"} />
-                      <p className="nameAboutSkill">React</p>
+                    <div className="graph">
+                      <div className="pro">
+                        <Progress pro={60} name={"progress-bar1"} />
+                        <p className="nameAboutSkill">HTML</p>
+                      </div>
+                      <div className="pro">
+                        <Progress pro={30} name={"progress-bar2"} />
+                        <p className="nameAboutSkill">CSS</p>
+                      </div>
+                      <div className="pro">
+                        <Progress pro={70} name={"progress-bar3"} />
+                        <p className="nameAboutSkill">JS</p>
+                      </div>
+                      <div className="pro">
+                        <Progress pro={45} name={"progress-bar4"} />
+                        <p className="nameAboutSkill">React</p>
+                      </div>
+                      <div className="pro">
+                        <Progress pro={55} name={"progress-bar5"} />
+                        <p className="nameAboutSkill">Python</p>
+                      </div>
                     </div>
                   </div>
                 ) : (

@@ -121,7 +121,7 @@
 }
 
 .graph {
-  height: 480px;
+  height: 300px;
   width: 300px;
   display: flex;
   flex-direction: row;
@@ -144,4 +144,22 @@
 
 .textBoxAbout p {
   margin: 3px;
+}
+
+.AboutSkillBox {
+  width: 300px;
+  height: 500px;
+}
+
+.turtleCon1 {
+  height: 18vh;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.turtle12 {
+  object-fit: contain;
+  /* width: 6vw; */
+  width: 40pt;
+  margin: 1px;
 }

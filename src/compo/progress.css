@@ -34,6 +34,15 @@
   animation: progress-animationREACT 3s forwards;
 }
 
+.progress-bar5 {
+  width: 15%;
+  background-color: #3776ab;
+  margin: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+  animation: progress-animationPY 3s forwards;
+}
+
 @keyframes progress-animationHTML {
   0% {
     height: 0%;
@@ -67,6 +76,15 @@
   }
   100% {
     height: 45%;
+  }
+}
+
+@keyframes progress-animationPY {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 55%;
   }
 }
 
