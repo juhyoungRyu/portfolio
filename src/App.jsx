@@ -83,7 +83,7 @@ const App = () => {
 
       {home ? <Home func={btnHandle} /> : ""}
       {about ? <About func={btnHandle} /> : ""}
-      {blog ? <Blog /> : ""}
+      {blog ? <Blog func={btnHandle} /> : ""}
       {content ? <Content /> : ""}
     </div>
   );
