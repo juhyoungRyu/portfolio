@@ -67,9 +67,9 @@ const App = () => {
           <button className="btn" onClick={() => btnHandle("content")}>
             <CgSmileMouthOpen className="icon" />
             {content ? (
-              <p className="sub1">Content</p>
+              <p className="sub1">Contact</p>
             ) : (
-              <p className="sub">Content</p>
+              <p className="sub">Contact</p>
             )}
           </button>
         </div>
