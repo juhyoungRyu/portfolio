@@ -41,8 +41,10 @@ const Content = () => {
     <div className="Content">
       <div className="con1">
         <form className="nameForm">
-          <p>Name</p>
+          <p className="contactP">Name</p>
           <input
+            className="inputContact"
+            placeholder="Write your name"
             value={name}
             onChange={(e) => {
               setName(e.target.value);
@@ -51,8 +53,10 @@ const Content = () => {
         </form>
 
         <form className="emailForm">
-          <p>Email</p>
+          <p className="contactP">Email</p>
           <input
+            className="inputContact"
+            placeholder="Write your email"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -61,8 +65,10 @@ const Content = () => {
         </form>
 
         <form className="phoneForm">
-          <p>Phone</p>
+          <p className="contactP">Phone</p>
           <input
+            className="inputContact"
+            placeholder="Write your phone number"
             value={phone}
             onChange={(e) => {
               setPhone(e.target.value);
@@ -73,9 +79,10 @@ const Content = () => {
 
       <div className="con2">
         <form>
-          <p>Message</p>
+          <p className="contactPM">Message</p>
           <textarea
-            rows={30}
+            className="textareaContact"
+            rows={20}
             cols={80}
             value={message}
             onChange={(e) => {
@@ -83,7 +90,9 @@ const Content = () => {
             }}
           ></textarea>
           <div className="btnConContent">
-            <button onClick={onSubmitForm}>SEND MESSAGE</button>
+            <button onClick={onSubmitForm} className="contactBtn">
+              SEND MESSAGE
+            </button>
           </div>
         </form>
       </div>
