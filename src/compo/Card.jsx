@@ -1,5 +1,6 @@
 import React from "react";
 import { BsGithub } from "react-icons/bs";
+import velog from "../img/velog.png";
 
 const Card = (props) => {
   const githubStyle = { backgroundColor: "black" };
@@ -54,7 +55,7 @@ const Card = (props) => {
                 goLink(false);
               }}
             >
-              <BsGithub className="iconCard" />
+              <img src={velog} className="velogIcon" />
               turtle_dev.log
             </div>
           )}

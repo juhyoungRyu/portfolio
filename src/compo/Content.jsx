@@ -4,6 +4,9 @@ import "./content.css";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Content = () => {
   useEffect(() => {
     init("user_LsnuRW8fE2OFM9DiT4AXQ");
@@ -25,8 +28,24 @@ const Content = () => {
       mail: email,
     };
 
+    toast.success("Sent!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    setTimeout(() => {
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    }, 3000);
+
     console.log(mail);
-    alert("Sent");
     emailjs
       .send("juhyoungMailService", "template_qqz36ip", mail)
       .then((res) => {
@@ -39,6 +58,17 @@ const Content = () => {
 
   return (
     <div className="Content">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="con1">
         <form className="nameForm">
           <p className="contactP">Name</p>
@@ -82,8 +112,8 @@ const Content = () => {
           <p className="contactPM">Message</p>
           <textarea
             className="textareaContact"
-            rows={20}
-            cols={80}
+            rows={15}
+            cols={70}
             value={message}
             onChange={(e) => {
               setMessage(e.target.value);
