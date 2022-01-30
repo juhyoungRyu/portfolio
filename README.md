@@ -1,4 +1,3 @@
 # My Portfolio
 
-Hi! I'm a Maker!
-Wow
+2022년 01월 30일 최초완성
