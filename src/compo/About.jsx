@@ -158,6 +158,12 @@ const About = (props) => {
         <button
           className="buttonAboutChange"
           onClick={() => {
+            setTimeout(() => {
+              if (flip2 === false) {
+                setFlip2((flip2) => !flip2);
+              }
+            }, 3000);
+
             if (flip1 === true) {
               if (twoVisible === false) {
                 setText1("");
@@ -203,6 +209,12 @@ const About = (props) => {
             if (btnText === "go Next") {
               props.func("blog");
             }
+
+            setTimeout(() => {
+              if (flip1 === false) {
+                clcikCard1();
+              }
+            }, 3000);
           }}
         >
           {btnText}
