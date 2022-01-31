@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import "./home.css";
 import { MdOutlineMouse } from "react-icons/md";
+import { photos } from "../img/profile.jpg";
 
 const Home = (props) => {
   // const transition = useTransition(stat, {
@@ -14,7 +15,7 @@ const Home = (props) => {
     <div className="Home">
       <section className="photoZone">
         <div className="photo">
-          <div className="pho" />
+          <img src={photos} className="pho" />
           <div className="text">
             Juhyoung Ryu
             <span className="innerText">
